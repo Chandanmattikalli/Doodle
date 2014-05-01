@@ -1,0 +1,51 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            
+            p
+            {
+                font-size:15px;
+                color: white;
+                text-shadow: 5px 5px 5px white;
+                
+            }
+        </style>
+        <script type="text/javascript">
+            count=1;
+            image1 = new Image();
+            
+            function change()
+            {
+                document.getElementById("image").src="2.jpg";
+               window.setTimeout("change1();",500);
+            }
+            function change1()
+            {
+                
+                document.getElementById("image").src="3.jpg";
+                window.setTimeout("change2();",500);
+            }
+            function change2()
+            {
+                
+                document.getElementById("image").src="4.jpg";
+                window.setTimeout("change();",500);
+            }
+           
+        </script>
+    </head>
+    <body bgcolor="black" onload="change()">
+       
+        
+<img id="image" src="1.jpg" border=0>
+        <br><br><br>
+        <p>NOTE :1] This animations are tested in mozilla firefox 16.0.2, so if they wont run in other browsers then please run in this version of firefox <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2] It needs wide screen to show animation correctly</p>
+    </body>
+</html>

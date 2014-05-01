@@ -1,0 +1,51 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <style>
+        div
+        {
+            position:absolute;
+            left:500px;
+            top:500px;
+            height: 10px;
+            width:10px;
+            color:red;
+             -
+               
+        }
+        @keyframes myfirst /* Firefox */
+{
+20%   {top:-60px; left:40px;transform:rotate(180deg);}
+35%   {top:-60px ;left:1000px;transform:rotate(180deg);}
+50%   {top:20px ;left:1100px;transform:rotate(360deg);}
+100%  {transform:rotate(360deg);}
+}
+        
+    </style>
+    <body>
+        <div id="qqw">TODO write content</div>
+        <button value="click" onclick="animate();">click</button>
+        <script>
+            function animate()
+            {
+                alert("sdf");
+                 if (qqw.style.mozAnimationName !== 'myfirst') {
+           qqw.style.mozAnimationName = 'myfirst';
+           qqw.style.mozAnimationDuration = '4s';
+
+            // make sure to reset the name after 4 seconds, otherwise another call to colorchange wont have any effect
+            setTimeout(function() {
+                qqw.style.mozAnimationName = '';
+            }, 4000);
+        }
+            }
+        </script>
+    </body>
+</html>
